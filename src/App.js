@@ -2,7 +2,7 @@
 
 function App() {
   return (
-    <div>
+    <div className="text-4xl flex justify-center items-center min-h-screen">
       Soon...
     </div>
   );
