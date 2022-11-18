@@ -5,6 +5,12 @@
       "email": "user1@gmail.com",
       "password": "1234",
       "createdAt": "2022-11-04T14:36:10.980Z"
+    },
+    {
+      "id": 3,
+      "email": "tawerka.power@gmail.com",
+      "password": "_Abcd12",
+      "createdAt": "2022-11-18T23:04:37.516Z"
     }
   ],
   "notes": [
