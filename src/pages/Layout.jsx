@@ -16,10 +16,10 @@ export default function Layout() {
       <header className="flex justify-between text-xl">
         <p>Welcome, {user.user.email}</p>
         <nav className="flex gap-10">
-          <NavLink to="/about" end className={setActive}>
+          <NavLink to="/" end className={setActive}>
             About
           </NavLink>
-          <NavLink to="/notes" end className={setActive}>
+          <NavLink to={`users/${user.user.id}/notes`} end className={setActive}>
             Notes
           </NavLink>
           <button onClick={handleLogout}>Log out</button>

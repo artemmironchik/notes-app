@@ -4,18 +4,11 @@ import { useNavigate } from "react-router-dom";
 export default function Register() {
   const navigate = useNavigate()
 
-  const [len, setLen] = useState(0);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [Rpassword, setRPassword] = useState('');
 
   const date = new Date(Date.now()).toISOString();
-
-  fetch("http://localhost:5000/users")
-    .then((r) => r.json())
-    .then((users) => {
-        setLen(users.length);
-  });
 
   const handleSetEmail = useCallback((e) => {
     setEmail(e.target.value);
@@ -34,7 +27,6 @@ export default function Register() {
 
   const handleRegister = () => {
     const user = {
-      id: len + 1,
       email: email,
       password: password,
       createdAt: date,
@@ -52,7 +44,7 @@ export default function Register() {
         alert('incorrect')
       })
     } else {
-      alert('idi nahui')
+      alert('incorrect data')
     }
   }
 
@@ -68,20 +60,20 @@ export default function Register() {
           onChange={handleSetEmail}
         />
         <input
-          className="bg-gray-200 py-2 pl-4 text-xl"
+          className="bg-gray-200 py-3 pl-4 text-xl"
           type="password"
           placeholder="Password"
           value={password}
           onChange={handleSetPassword}
         />
         <input
-          className="bg-gray-200 py-2 pl-4 text-xl"
+          className="bg-gray-200 py-3 pl-4 text-xl"
           type="password"
           placeholder="Repeat password"
           value={Rpassword}
           onChange={handleSetRPassword}
         />
-        <button onClick={handleRegister} className="bg-gray-200 py-4 px-16 text-2xl">Register</button>
+        <button onClick={handleRegister} className="bg-gray-200 py-3 px-16 text-2xl">Register</button>
       </div>
       <footer className="border-t border-black min-w-full min-h-[41px]">
         <div className="flex justify-between mt-4">

@@ -11,15 +11,53 @@
       "email": "tawerka.power@gmail.com",
       "password": "_Abcd12",
       "createdAt": "2022-11-18T23:04:37.516Z"
+    },
+    {
+      "email": "taw@gmail.com",
+      "password": "Abc123_",
+      "createdAt": "2022-11-19T08:29:52.343Z",
+      "id": 4
+    },
+    {
+      "email": "sdk@gmail.com",
+      "password": "Qwe123_",
+      "createdAt": "2022-11-19T08:58:13.488Z",
+      "id": 5
+    },
+    {
+      "email": "taw@gmail.com",
+      "password": "Qwer1234_",
+      "createdAt": "2022-11-19T13:12:17.730Z",
+      "id": 6
     }
   ],
   "notes": [
     {
       "id": 1,
       "userId": 1,
-      "title": "Первая заметка",
-      "body": "Тело первой заметки",
+      "title": "Первая заметкаffd",
+      "body": "Тело первой заметкиfdhd",
       "createdAt": "2022-11-05T14:36:10.980Z"
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "title": "Первая заметка",
+      "body": "Тело первой заметки d vkjfsdviefguefakgukefsgweusgfugfrvsukguegufgerugfvreugavugfeufevguyfcguefufeguygueefyuefguyefguefgefygeuger",
+      "createdAt": "2022-11-05T14:36:10.980Z"
+    },
+    {
+      "title": "hgketet",
+      "body": "febsefaieafikae",
+      "createdAt": "2022-11-20T20:54:12.354Z",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "title": "hbjkgk",
+      "body": "jhukhuk",
+      "createdAt": "2022-11-20T20:57:05.895Z",
+      "id": 4
     }
   ]
 }

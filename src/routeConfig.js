@@ -1,4 +1,3 @@
-import { Navigate } from 'react-router-dom'
 import About from './pages/About'
 import Notes, {loader as notesLoader} from './pages/Notes';
 import Note, {loader as noteLoader} from './components/note/Note';
@@ -8,29 +7,26 @@ import NotFound from './pages/NotFound'
 
 export const routes = [
     {
-      path: '/',
-      element: <Navigate to="/login" />,
-    },
-    {
-      path: '/about',
+      index: true,
       element: <About />,
     },
     {
-      path: '/notes',
+      path: 'users/:userId/notes',
       loader: notesLoader,
       element: <Notes />,
     },
     {
-      path: '/notes/:id',
+      path: 'users/:userId/notes/:id',
       loader: noteLoader,
       element: <Note />,
     },
     {
-      path: '/notes/create',
+      path: 'users/:userId/notes/create',
       element: <CreateNote />,
     },
     {
-      path: '/notes/edit',
+      path: 'users/:userId/notes/:id/edit',
+      loader: noteLoader,
       element: <EditNote />,
     },
     {

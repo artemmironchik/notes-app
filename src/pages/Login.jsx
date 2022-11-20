@@ -41,20 +41,20 @@ export default function Login() {
       <div className="flex flex-col justify-center items-center flex-1 gap-6">
         <p className="text-4xl font-bold">Log in</p>
         <input
-          className="bg-gray-200 py-2 pl-4 text-xl"
+          className="bg-gray-200 py-3 pl-4 text-xl"
           type="email"
           placeholder="Email"
           value={email}
           onChange={handleSetEmail}
         />
         <input
-          className="bg-gray-200 py-2 pl-4 text-xl"
+          className="bg-gray-200 py-3 pl-4 text-xl"
           type="password"
           placeholder="Password"
           value={password}
           onChange={handleSetPassword}
         />
-        <button onClick={handleLogin} className="bg-gray-200 py-4 px-16 text-2xl">Log in</button>
+        <button onClick={handleLogin} className="bg-gray-200 py-3 px-16 text-2xl">Log in</button>
         <div className="text-xl">
           Don't have an account ? <Link to='/register' className="text-blue-700 hover:underline cursor-pointer">Register</Link> now !
         </div>
