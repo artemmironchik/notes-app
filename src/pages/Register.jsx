@@ -1,14 +1,14 @@
-import { useState, useCallback } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useCallback } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { getUsers } from '../api/usersApi';
+import { DATE, EMAIL_REGEXP, PASS_REGEXP } from '../constants';
 
 export default function Register() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [Rpassword, setRPassword] = useState('');
-
-  const date = new Date(Date.now()).toISOString();
 
   const handleSetEmail = useCallback((e) => {
     setEmail(e.target.value);
@@ -22,31 +22,22 @@ export default function Register() {
     setRPassword(e.target.value);
   }, []);
 
-  const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
-  const PASS_REGEXP = /(?=.*[0-9])(?=.*[!@#$%^&*-_])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*-_]{6,}/g;
-
   const handleRegister = () => {
     const user = {
       email: email,
       password: password,
-      createdAt: date,
-    }
-    if(password === Rpassword && EMAIL_REGEXP.test(email) && PASS_REGEXP.test(password)) {
-      fetch(`http://localhost:5000/users`, {
-      method: 'POST',
-      body: JSON.stringify(user),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-      }).then(() => {
-        navigate('/login')
-      }).catch(() => {
-        alert('incorrect')
-      })
+      createdAt: DATE,
+    };
+    if (
+      password === Rpassword &&
+      EMAIL_REGEXP.test(email) &&
+      PASS_REGEXP.test(password)
+    ) {
+      getUsers(user, navigate('/login'));
     } else {
-      alert('incorrect data')
+      alert('incorrect data');
     }
-  }
+  };
 
   return (
     <div className="min-h-screen px-10 py-8 m-0 flex flex-col">
@@ -73,7 +64,12 @@ export default function Register() {
           value={Rpassword}
           onChange={handleSetRPassword}
         />
-        <button onClick={handleRegister} className="bg-gray-200 py-3 px-16 text-2xl">Register</button>
+        <button
+          onClick={handleRegister}
+          className="bg-gray-200 py-3 px-16 text-2xl"
+        >
+          Register
+        </button>
       </div>
       <footer className="border-t border-black min-w-full min-h-[41px]">
         <div className="flex justify-between mt-4">
@@ -90,5 +86,5 @@ export default function Register() {
         </div>
       </footer>
     </div>
-  )
+  );
 }

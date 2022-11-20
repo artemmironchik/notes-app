@@ -33,17 +33,10 @@
   ],
   "notes": [
     {
-      "id": 1,
-      "userId": 1,
-      "title": "Первая заметкаffd",
-      "body": "Тело первой заметкиfdhd",
-      "createdAt": "2022-11-05T14:36:10.980Z"
-    },
-    {
       "id": 2,
       "userId": 1,
       "title": "Первая заметка",
-      "body": "Тело первой заметки d vkjfsdviefguefakgukefsgweusgfugfrvsukguegufgerugfvreugavugfeufevguyfcguefufeguygueefyuefguyefguefgefygeuger",
+      "body": "Тело первой заметкиhhn",
       "createdAt": "2022-11-05T14:36:10.980Z"
     },
     {
@@ -51,13 +44,6 @@
       "body": "febsefaieafikae",
       "createdAt": "2022-11-20T20:54:12.354Z",
       "id": 3
-    },
-    {
-      "userId": 1,
-      "title": "hbjkgk",
-      "body": "jhukhuk",
-      "createdAt": "2022-11-20T20:57:05.895Z",
-      "id": 4
     }
   ]
 }

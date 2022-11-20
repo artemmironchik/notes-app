@@ -6,10 +6,10 @@ const setActive = ({ isActive }) =>
   isActive ? 'text-black font-bold' : 'text-gray-500';
 
 export default function Layout() {
-  const user = useUserContext()
+  const user = useUserContext();
   const handleLogout = () => {
-    user.setUser({ email: '' })
-  }
+    user.setUser({ email: '' });
+  };
 
   return (
     <div className="m-auto max-w-6xl px-10 min-h-screen flex flex-col py-8">
@@ -19,7 +19,11 @@ export default function Layout() {
           <NavLink to="/" end className={setActive}>
             About
           </NavLink>
-          <NavLink to={`users/${user.user.id}/notes`} end className={setActive}>
+          <NavLink
+            to={`/users/${user.user.id}/notes`}
+            end
+            className={setActive}
+          >
             Notes
           </NavLink>
           <button onClick={handleLogout}>Log out</button>
