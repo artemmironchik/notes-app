@@ -3,7 +3,7 @@ import { useUserContext } from './userContext';
 
 export const ProtectedRoute = ({ children }) => {
   const { user } = useUserContext();
-  if (!user.email) {
+  if (!user) {
     return <Navigate to="/login" />;
   }
   return children;
